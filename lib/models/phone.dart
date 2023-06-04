@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class Phone {
   // Atributos
-  final String ddd;
+  final int ddd;
   final String phone;
 
   //Construtor
@@ -29,12 +29,12 @@ class Phone {
   //Deserialização
   factory Phone.fromMap(Map<String, dynamic> map) {
     return Phone(
-      ddd: map['ddd']?? '',
-      phone: map['phone']?? '',
+      ddd: map['ddd'] ?? 0,
+      phone: map['phone'] ?? '',
     );
   }
 
-  factory Phone.fromJson(String json){
+  factory Phone.fromJson(String json) {
     final jsonMap = jsonDecode(json);
     return Phone.fromMap(jsonMap);
   }

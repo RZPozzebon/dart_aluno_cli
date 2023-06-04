@@ -49,7 +49,7 @@ class Aluno {
       age: (map['age'] ?? 0) as int,
       nameCourses: List<String>.from((map['nameCourses'])),
       courses: map['courses']
-              ?.map((courseMap) => Courses.fromMap(courseMap))
+              ?.map<Courses>((courseMap) => Courses.fromMap(courseMap))
               .toList() ??
           <Courses>{},
       address: Address.fromMap(map['address'] as Map<String, dynamic>),
