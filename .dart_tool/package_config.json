@@ -56,6 +56,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "dart_utils",
+      "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/dart_utils-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "file",
       "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
@@ -70,6 +76,12 @@
     {
       "name": "glob",
       "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -284,7 +296,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-06-03T12:47:26.996091Z",
+  "generated": "2023-06-03T14:01:53.426292Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

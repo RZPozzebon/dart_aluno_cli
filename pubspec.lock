@@ -73,6 +73,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
+  dart_utils:
+    dependency: "direct main"
+    description:
+      name: dart_utils
+      sha256: bebe6d2e4cc4489209f696168e5d3436a6b9263e7982685de95b83ab1a381bcb
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   file:
     dependency: transitive
     description:
@@ -97,6 +105,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.6"
   http_multi_server:
     dependency: transitive
     description:

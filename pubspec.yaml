@@ -12,3 +12,6 @@ environment:
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0
+dependencies:
+  dart_utils: ^2.0.0
+  http: ^0.13.6
