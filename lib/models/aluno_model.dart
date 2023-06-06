@@ -5,9 +5,9 @@ import 'package:dart_aluno_cli/models/courses.dart';
 
 import 'address.dart';
 
-class Aluno {
+class AlunoModel {
   // Atributos
-  final int id;
+  final int? id;
   final String name;
   final int? age;
   final List<String> nameCourses;
@@ -15,8 +15,8 @@ class Aluno {
   final Address address;
 
   // Construtor
-  Aluno({
-    required this.id,
+  AlunoModel({
+    this.id,
     required this.name,
     this.age,
     required this.nameCourses,
@@ -42,8 +42,8 @@ class Aluno {
 
   String toJson() => jsonEncode(toMap());
 
-  factory Aluno.fromMap(Map<String, dynamic> map) {
-    return Aluno(
+  factory AlunoModel.fromMap(Map<String, dynamic> map) {
+    return AlunoModel(
       id: (map['id'] ?? 0) as int,
       name: (map['name'] ?? '') as String,
       age: (map['age'] ?? 0) as int,
@@ -56,5 +56,6 @@ class Aluno {
     );
   }
 
-  factory Aluno.fromJson(String source) => Aluno.fromMap(jsonDecode(source));
+  factory AlunoModel.fromJson(String source) =>
+      AlunoModel.fromMap(jsonDecode(source));
 }

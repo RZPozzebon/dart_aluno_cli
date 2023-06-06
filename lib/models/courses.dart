@@ -5,7 +5,7 @@ class Courses {
   // Atributos
   final int id;
   final String name;
-  final bool isStudent;
+  bool? isStudent;
 
   //Construtor
   Courses({
