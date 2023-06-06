@@ -26,4 +26,14 @@ class AlunoRepositoryImpl implements AlunosRepository {
 
     if (alunoSalvoResult.statusCode != 200) throw UnimplementedError();
   }
+  
+  @override
+  Future<void> alterarAluno(AlunoModel aluno) async {
+    final alunoSalvoResult = await http.post(
+        Uri.parse('http://localhost:8080/students/${aluno.id}'),
+        body: aluno.toJson(),
+        headers: {'content-type': 'application/json'});
+
+    if (alunoSalvoResult.statusCode != 200) throw UnimplementedError();
+  }
 }

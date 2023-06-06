@@ -7,4 +7,6 @@ abstract class AlunosRepository {
   Future<List<AlunoModel>> findAll();
 
   Future<void> salvaAluno(AlunoModel aluno);
+
+  Future<void> alterarAluno(AlunoModel aluno);
 }
