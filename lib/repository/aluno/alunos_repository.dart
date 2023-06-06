@@ -9,4 +9,6 @@ abstract class AlunosRepository {
   Future<void> salvaAluno(AlunoModel aluno);
 
   Future<void> alterarAluno(AlunoModel aluno);
+
+  Future<void> deletarAluno(int idAluno);
 }

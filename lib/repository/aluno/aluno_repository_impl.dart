@@ -29,10 +29,18 @@ class AlunoRepositoryImpl implements AlunosRepository {
   
   @override
   Future<void> alterarAluno(AlunoModel aluno) async {
-    final alunoSalvoResult = await http.post(
+    final alunoSalvoResult = await http.put(
         Uri.parse('http://localhost:8080/students/${aluno.id}'),
         body: aluno.toJson(),
         headers: {'content-type': 'application/json'});
+
+    if (alunoSalvoResult.statusCode != 200) throw UnimplementedError();
+  }
+  
+  @override
+  Future<void> deletarAluno(int idAluno) async{
+    final alunoSalvoResult = await http.delete(
+        Uri.parse('http://localhost:8080/students/$idAluno'));
 
     if (alunoSalvoResult.statusCode != 200) throw UnimplementedError();
   }

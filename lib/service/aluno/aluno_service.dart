@@ -115,4 +115,13 @@ class AlunoService {
       throw Exception('Falha ao alterar aluno. Erro: ' + e.toString());
     }
   }
+
+  Future<void> deletarAluno(int idAluno) async {
+    try {
+      await _alunosRepository.deletarAluno(idAluno);
+      print('Aluno Deletado com sucesso...');
+    } on Exception catch (e) {
+      print('Falha ao deletar aluno. Erro: ' + e.toString());
+    }
+  }
 }
