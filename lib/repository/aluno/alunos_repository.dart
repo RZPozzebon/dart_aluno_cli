@@ -6,6 +6,8 @@ abstract class AlunosRepository {
   // Classe sem regras de negocio envolvida
   Future<List<AlunoModel>> findAll();
 
+  Future<AlunoModel> findById(int id);
+
   Future<void> salvaAluno(AlunoModel aluno);
 
   Future<void> alterarAluno(AlunoModel aluno);

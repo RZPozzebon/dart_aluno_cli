@@ -44,4 +44,10 @@ class AlunoRepositoryImpl implements AlunosRepository {
 
     if (alunoSalvoResult.statusCode != 200) throw UnimplementedError();
   }
+  
+  @override
+  Future<AlunoModel> findById(int id) {
+    // TODO: implement findById
+    throw UnimplementedError();
+  }
 }

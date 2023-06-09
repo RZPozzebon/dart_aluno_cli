@@ -62,6 +62,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dio",
+      "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/dio-4.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "file",
       "rootUri": "file:///C:/Users/rodri/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
@@ -296,7 +302,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-06-03T14:01:53.426292Z",
+  "generated": "2023-06-06T23:54:25.598046Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

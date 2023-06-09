@@ -1,12 +1,15 @@
+import 'dart:io';
+
 import 'package:dart_aluno_cli/service/aluno/aluno_service.dart';
 
 void main(List<String> args) async {
   try {
     final AlunoService alunoService = AlunoService();
-
-    final caminhoArquivo =
+    // Ler o que o usuário está digitando
+    //final usuarioEscreveu = stdin.readLineSync();
+    // caminhoArquivo =
         'C:/Projetos_Academia_Flutter/Dart/new_project_aluno_cli/dart_aluno_cli/Alunos copy.csv';
-    await alunoService.deletarAluno(6);
+    //await alunoService.deletarAluno(6);
 
     final alunos = await alunoService.findAll();
     print('Quantidade de alunos: ${alunos.length}');

@@ -1,22 +1,20 @@
-import 'dart:convert';
-
+import 'package:dio/dio.dart';
 import '../../models/courses.dart';
-import 'package:http/http.dart' as http;
 
 class ProdutoRepository {
   Future<Courses> findByName(String name) async {
-    final response =
-        await http.get(Uri.parse('http://localhost:8080/products?name=$name'));
-    if (response.statusCode != 200) {
+    try {
+      final response = await Dio().get(
+        'http://localhost:8080/products',
+        queryParameters: {'name': name},
+      );
+
+      if (response.data.isEmpty) {
+        throw Exception('Produto não encontrato');
+      }
+      return Courses.fromMap(response.data.first);
+    } on DioError catch (e) {
       throw Exception();
     }
-
-    final responseData = jsonDecode(response.body);
-
-    if (responseData== '[]') {
-      throw Exception('Produto não encontrato');
-    }
-
-    return Courses.fromMap(responseData.first);
   }
 }

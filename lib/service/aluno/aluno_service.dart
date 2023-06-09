@@ -5,10 +5,10 @@ import 'package:dart_aluno_cli/models/phone.dart';
 import 'package:dart_aluno_cli/repository/produto/produto_repository.dart';
 import '../../models/aluno_model.dart';
 import '../../models/courses.dart';
-import '../../repository/aluno/aluno_repository_impl.dart';
+import '../../repository/aluno/aluno_dio_repository_impl.dart';
 
 class AlunoService {
-  final _alunosRepository = AlunoRepositoryImpl();
+  final _alunosRepository = AlunoDioRepositoryImpl();
   final _produtoRepository = ProdutoRepository();
 
   Future<List<AlunoModel>> findAll() async {
