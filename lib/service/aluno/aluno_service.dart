@@ -15,6 +15,13 @@ class AlunoService {
     return await _alunosRepository.findAll();
   }
 
+  Future<AlunoModel> findById(int id) async{
+    if(id == null){
+      throw Exception('Informe um id');
+    }
+    return await _alunosRepository.findById(id);
+  }
+  
   Future<void> salvarAluno(String caminhoArquivo) async {
     final arquivoData = File(caminhoArquivo).readAsLinesSync();
     List<Courses> cursos = [];
