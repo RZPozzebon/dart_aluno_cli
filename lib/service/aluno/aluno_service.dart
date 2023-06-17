@@ -15,11 +15,12 @@ class AlunoService {
     return await _alunosRepository.findAll();
   }
 
-  Future<AlunoModel> findById(int id) async{
-    if(id == null){
+  Future<AlunoModel> findById(int id) async {
+    if(id== null){
       throw Exception('Informe um id');
     }
-    return await _alunosRepository.findById(id);
+    final alunoResponse = await _alunosRepository.findById(id);
+    return alunoResponse;
   }
   
   Future<void> salvarAluno(String caminhoArquivo) async {
@@ -89,12 +90,13 @@ class AlunoService {
       final cursoMap = aluno[2].split(',').map((e) => e.trim()).toList();
 
       for (var element in cursoMap) {
-        final curso = await _produtoRepository.findByName(cursoMap[0]);
+        final curso = await _produtoRepository.findByName(element[0]);
         curso.isStudent = true;
         cursos.add(curso);
       }
       // Cria o objeto aluno
       final alunoModel = AlunoModel(
+        id: idAluno,
         name: aluno[0],
         age: int.parse(aluno[1]),
         nameCourses: aluno,
@@ -125,8 +127,7 @@ class AlunoService {
 
   Future<void> deletarAluno(int idAluno) async {
     try {
-      await _alunosRepository.deletarAluno(idAluno);
-      print('Aluno Deletado com sucesso...');
+      await _alunosRepository.deletarAluno(idAluno);      
     } on Exception catch (e) {
       print('Falha ao deletar aluno. Erro: ' + e.toString());
     }

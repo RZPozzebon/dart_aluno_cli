@@ -63,7 +63,7 @@ class AlunoDioRepositoryImpl implements AlunosRepository {
   @override
   Future<void> deletarAluno(int idAluno) async {
     try {
-      Dio().put('http://localhost:8080/students/$idAluno');
+      Dio().delete('http://localhost:8080/students/$idAluno');
     } on DioError catch (e) {
       print(e);
       throw Exception();
