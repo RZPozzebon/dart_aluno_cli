@@ -15,7 +15,8 @@ void main(List<String> args) async {
     print('  3- Alterar um aluno');
     print('  4- Deletar um aluno');
 
-    final opcaoEscolhida = int.parse(stdin.readLineSync()!);
+    final opcaoEscolhida = 1;
+    //int.parse(stdin.readLineSync()!);
     switch (opcaoEscolhida) {
       case 0:
         print('Informe o caminho do arquivo');
